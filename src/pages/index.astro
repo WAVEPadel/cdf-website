@@ -98,19 +98,24 @@ const featuredWagens = [
 ];
 
 const bouwProces = [
-  { titel: "Tekening uitzoeken", image: "/proces-tekening-uitzoeken.png", position: "center 45%" },
-  { titel: "Knollen scheuren", image: "/proces-knollen-scheuren-2.png" },
-  { titel: "Tent opbouwen", image: "/proces-tent-opbouwen.png" },
-  { titel: "Knollen poten", image: "/proces-knollen-poten.png" },
-  { titel: "Skelet lassen", image: "/proces-skelet-lassen-2.png" },
-  { titel: "Plasticen", image: "/proces-plasticen.png" },
-  { titel: "Freubelen", image: "/proces-freubelen.png", position: "center 20%" },
-  { titel: "Struunen", image: "/proces-struunen.png" },
-  { titel: "Bloemen plukken", image: "/proces-bloemen-plukken.png" },
-  { titel: "Bloemen prikken", image: "/proces-bloemen-prikken.png", position: "center 18%" },
-  { titel: "Vrijdag nacht doorhalen", image: "/proces-vrijdag-nacht-doorhalen.png" },
-  { titel: "Figuratie", image: "/proces-figuratie.png" },
-  { titel: "Op naar het bloemencorso!", image: "/proces-corsowagen-compleet.png" },
+  {
+    titel: "Tekening uitzoeken",
+    image: "/proces-tekening-uitzoeken.png",
+    position: "center 45%",
+    tekst: "We kiezen het ontwerp en werken het idee samen uit.",
+  },
+  { titel: "Knollen scheuren", image: "/proces-knollen-scheuren-2.png", tekst: "De knollen worden losgemaakt en gesorteerd voor de teelt." },
+  { titel: "Tent opbouwen", image: "/proces-tent-opbouwen.png", tekst: "We bouwen de tent op zodat we droog en goed kunnen werken." },
+  { titel: "Knollen poten", image: "/proces-knollen-poten.png", tekst: "De knollen gaan de grond in als start van het bloemenseizoen." },
+  { titel: "Skelet lassen", image: "/proces-skelet-lassen-2.png", tekst: "Het stalen frame van de corsowagen wordt opgebouwd en gelast." },
+  { titel: "Plasticen", image: "/proces-plasticen.png", tekst: "We bekleden delen van de wagen en maken alles klaar voor afwerking." },
+  { titel: "Freubelen", image: "/proces-freubelen.png", position: "center 20%", tekst: "Details en decoratie worden met veel geduld met de hand gemaakt." },
+  { titel: "Struunen", image: "/proces-struunen.png", tekst: "In en rond de schuur regelen we alles wat nodig is voor de volgende stappen." },
+  { titel: "Bloemen plukken", image: "/proces-bloemen-plukken.png", tekst: "De bloemen worden geplukt en verzameld voor het prikwerk." },
+  { titel: "Bloemen prikken", image: "/proces-bloemen-prikken.png", position: "center 18%", tekst: "Duizenden bloemen worden één voor één op de wagen geprikt." },
+  { titel: "Vrijdag nacht doorhalen", image: "/proces-vrijdag-nacht-doorhalen.png", tekst: "We werken de hele nacht door om alles op tijd af te krijgen." },
+  { titel: "Figuratie", image: "/proces-figuratie.png", tekst: "De figuratie oefent en maakt de presentatie van de wagen compleet." },
+  { titel: "Op naar het bloemencorso!", image: "/proces-corsowagen-compleet.png", tekst: "De wagen is klaar: tijd om vol trots het parcours op te gaan." },
 ];
 
 const latestNews = newsItems.slice(0, 3);
@@ -459,9 +464,7 @@ const latestNews = newsItems.slice(0, 3);
                 <span aria-hidden="true" class="text-[#d36a42]">↗</span>
                 <span>{stap.titel}</span>
               </p>
-              <p class="mt-2 text-sm leading-relaxed text-stone-600">
-                Hier komt nog een uitleg over de stap (bij {stap.titel.toLowerCase()}, {stap.titel.toLowerCase()} etc etc)
-              </p>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">{stap.tekst}</p>
             </article>
           ))
         }

@@ -12,9 +12,6 @@ const wagens = [
   { jaar: "2015", naam: "Jaarringen", beschrijving: "De groei van de natuur vertaald in een indrukwekkende bloemencreatie.", prijs: "1B | Ontwerpersprijs", image: "/archief-jaarringen.png" },
   { jaar: "2012", naam: "De Trip", beschrijving: "Een psychedelische reis door tijd en ruimte, bekroond met de hoogste eer.", prijs: "Eerste- en Ereprijs | Figuratieprijs", image: "/archief-de-trip.png" },
   { jaar: "1997", naam: "Flintstones", beschrijving: "De prehistorische familie uit Bedrock kwam tot leven. De laatste wagen van de eerste periode, afgesloten met het grootste feest.", prijs: "", image: "/archief-flintstones.png" },
-  { jaar: "1995", naam: "Wagennaam volgt", beschrijving: "(voorbeeld)", prijs: "", image: "https://picsum.photos/800/520?random=500" },
-  { jaar: "1994", naam: "Wagennaam volgt", beschrijving: "(voorbeeld)", prijs: "", image: "https://picsum.photos/800/520?random=501" },
-  { jaar: "1993", naam: "Wagennaam volgt", beschrijving: "Het jaar van de comeback. Na een periode van stilstand keerde Confrérie des Fleurs terug.", prijs: "", image: "https://picsum.photos/800/520?random=502" },
 ];
 ---
 
@@ -28,7 +25,7 @@ const wagens = [
   <section class="mx-auto w-full max-w-6xl px-4 pb-20">
     <p class="cdf-eyebrow">Archief</p>
     <h2 class="mt-3 text-2xl font-semibold">Alle wagens</h2>
-    <p class="mt-3 text-stone-600">13 wagens in het archief</p>
+    <p class="mt-3 text-stone-600">{wagens.length} wagens in het archief</p>
     <div class="mt-8 grid gap-4">
       {
         wagens.map((wagen) => (
