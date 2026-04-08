@@ -4,42 +4,77 @@ import SponsorForm from "../components/SponsorForm.astro";
 ---
 
 <BaseLayout title="Contact | Confrérie des Fleurs">
-  <section class="mx-auto w-full max-w-6xl px-4 py-16">
+  <section class="mx-auto w-full max-w-6xl px-4 py-14 md:py-16">
     <p class="cdf-eyebrow">Confrérie des Fleurs</p>
     <h1 class="mt-3 text-3xl font-bold md:text-4xl">Contact</h1>
-    <p class="mt-4 max-w-3xl text-stone-600">Benieuwd naar Confrérie des Fleurs? Kom gerust eens kijken of volg ons via Instagram.</p>
+    <p class="mt-4 max-w-3xl text-stone-600">
+      Benieuwd naar onze bouwplek, sfeer en team? Je bent van harte welkom om langs te komen tijdens het seizoen.
+      Hieronder vind je de belangrijkste informatie in een duidelijk overzicht.
+    </p>
+    <div class="mt-7 flex flex-wrap gap-3 text-sm">
+      <a
+        href="https://www.instagram.com/corsowijk_cdf/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-full bg-[#d36a42] px-5 py-2 font-medium text-white transition hover:brightness-95"
+      >
+        Stuur ons een DM op Instagram
+      </a>
+      <a
+        href="#sponsor"
+        class="rounded-full border border-stone-300 bg-white px-5 py-2 font-medium text-stone-700 transition hover:border-stone-400"
+      >
+        Meer over sponsoring
+      </a>
+    </div>
   </section>
 
-  <section class="mx-auto w-full max-w-6xl px-4 pb-16">
+  <section class="mx-auto w-full max-w-6xl px-4 pb-14 md:pb-16">
     <h2 class="text-2xl font-semibold">Praktische informatie</h2>
-    <div class="mt-8 grid gap-4 md:grid-cols-2">
-      <article class="cdf-surface-card rounded-xl p-5">
-        <h3 class="text-xl font-semibold">Locatie</h3>
+    <div class="mt-6 grid gap-4 md:grid-cols-2">
+      <article class="cdf-surface-card rounded-2xl p-5 md:p-6">
+        <p class="cdf-eyebrow">Locatie</p>
+        <h3 class="mt-1 text-xl font-semibold">Bouwlocatie CDF</h3>
         <p class="mt-2 text-stone-600">Siegerslag 2, Eelde</p>
-        <p class="text-sm text-stone-500">(voorbeeld, controleren)</p>
+        <p class="mt-1 text-sm text-stone-500">(adres ter controle)</p>
       </article>
-      <article class="cdf-surface-card rounded-xl p-5">
-        <h3 class="text-xl font-semibold">Instagram</h3>
-        <a href="https://www.instagram.com/corsowijk_cdf/" target="_blank" class="mt-2 inline-block text-emerald-700">@corsowijk_cdf</a>
+      <article class="cdf-surface-card rounded-2xl p-5 md:p-6">
+        <p class="cdf-eyebrow">Online</p>
+        <h3 class="mt-1 text-xl font-semibold">Instagram updates</h3>
+        <a
+          href="https://www.instagram.com/corsowijk_cdf/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cdf-link-accent mt-2 inline-flex items-center gap-2 font-medium"
+        >
+          @corsowijk_cdf <span aria-hidden="true">↗</span>
+        </a>
+        <p class="mt-2 text-sm text-stone-600">Hier delen we bouwavonden, mijlpalen en praktische updates.</p>
       </article>
-      <article class="cdf-surface-card rounded-xl p-5">
-        <h3 class="text-xl font-semibold">Bouwseizoen</h3>
-        <p class="mt-2 text-stone-600">Mei/juni tot half september (voorbeeld)</p>
+      <article class="cdf-surface-card rounded-2xl p-5 md:p-6">
+        <p class="cdf-eyebrow">Seizoen</p>
+        <h3 class="mt-1 text-xl font-semibold">Wanneer kun je langskomen?</h3>
+        <p class="mt-2 text-stone-600">Mei/juni tot half september zijn we actief aan het bouwen.</p>
+        <p class="mt-2 text-sm text-stone-600">Richting corsoweek zijn er extra veel activiteiten op locatie.</p>
       </article>
-      <article class="cdf-surface-card rounded-xl p-5">
-        <h3 class="text-xl font-semibold">Kom gerust langs!</h3>
-        <p class="mt-2 text-stone-600">In het corsoseizoen wordt er gebouwd vanaf mei/juni tot half september. (voorbeeld)</p>
-        <p class="mt-2 text-stone-600">Bezoekmomenten volgen later. Houd onze Instagram in de gaten voor de laatste updates.</p>
+      <article class="cdf-surface-card rounded-2xl p-5 md:p-6">
+        <p class="cdf-eyebrow">Bezoek</p>
+        <h3 class="mt-1 text-xl font-semibold">Kom gerust langs</h3>
+        <p class="mt-2 text-stone-600">Nieuwe bezoekmomenten en inloopavonden communiceren we via Instagram.</p>
+        <p class="mt-2 text-sm text-stone-600">Twijfel je? Stuur ons een berichtje, dan laten we weten wat handig is.</p>
       </article>
     </div>
   </section>
 
-  <section class="mx-auto w-full max-w-6xl px-4 pb-16">
+  <section class="mx-auto w-full max-w-6xl px-4 pb-16" id="sponsor">
     <SponsorForm />
   </section>
 
   <section class="mx-auto w-full max-w-6xl px-4 pb-20">
-    <p class="text-stone-600">We kijken uit naar uw bezoek of bericht. Tot bij de Confrérie!</p>
-    <p class="mt-2 text-emerald-700">Ook dat is Confrérie!</p>
+    <div class="cdf-surface-card rounded-2xl p-5 md:p-6">
+      <h2 class="text-2xl font-semibold">Tot bij de Confrérie</h2>
+      <p class="mt-2 text-stone-600">We kijken uit naar je bezoek, bericht of support. Iedereen is welkom om de sfeer te proeven.</p>
+      <p class="mt-3 italic text-[#7a4b35]">Ook dat is Confrérie!</p>
+    </div>
   </section>
 </BaseLayout>
