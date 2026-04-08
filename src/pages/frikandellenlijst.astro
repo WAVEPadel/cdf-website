@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Frikandellenlijst | Confrérie des Fleurs">
+  <section class="mx-auto w-full max-w-6xl px-4 py-16">
+    <p class="text-sm uppercase tracking-[0.2em] text-[#b45433]">Confrérie des Fleurs</p>
+    <h1 class="mt-3 text-4xl font-bold md:text-5xl">De legendarische frikandellenlijst</h1>
+    <p class="mt-4 max-w-3xl text-stone-600">
+      Op deze pagina houden we de onofficiele, maar zeer serieuze frikandellenstatistiek bij.
+      Bouwen op topniveau vraagt nu eenmaal om top-brandstof.
+    </p>
+  </section>
+
+  <section class="mx-auto w-full max-w-6xl px-4 pb-10">
+    <article class="relative overflow-hidden rounded-3xl border border-[#e6c9bb] bg-[linear-gradient(135deg,#fff7f0_0%,#fde7d6_45%,#f8d5bd_100%)] p-8">
+      <div class="pointer-events-none absolute -right-12 -top-12 h-44 w-44 rounded-full bg-[#d36a42]/20 blur-2xl"></div>
+      <div class="pointer-events-none absolute -bottom-16 left-8 h-36 w-36 rounded-full bg-[#ffb380]/25 blur-2xl"></div>
+      <div class="relative">
+        <p class="inline-flex items-center gap-2 rounded-full border border-[#e4bba8] bg-white/70 px-3 py-1 text-sm font-medium text-[#a14d2f] shadow-sm">
+          🌭 Snack powered performance
+        </p>
+        <h2 class="mt-4 text-3xl font-black leading-tight text-[#6f2f1e] md:text-4xl">CDF Frikandellen Dashboard</h2>
+        <p class="mt-3 max-w-3xl text-stone-700">
+          Of het nu ontwerpavond, laswerk of bloemen prikken is: de frikandel blijft een vaste kracht in de schuur.
+        </p>
+
+        <div class="mt-7 grid gap-4 md:grid-cols-2">
+          <div class="rounded-2xl border border-[#e7bca9] bg-white/85 p-5 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.2em] text-stone-500">Seizoen 2024</p>
+            <p class="mt-2 text-5xl font-black leading-none text-[#cc5b34]">439</p>
+            <p class="mt-2 text-base text-stone-700">frikandellen</p>
+            <div class="mt-3 h-2 rounded-full bg-[#f5ddd0]">
+              <div class="h-2 w-[78%] rounded-full bg-[#d36a42]"></div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[#e7bca9] bg-white/85 p-5 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.2em] text-stone-500">Seizoen 2025</p>
+            <p class="mt-2 text-5xl font-black leading-none text-[#cc5b34]">562</p>
+            <p class="mt-2 text-base text-stone-700">frikandellen</p>
+            <div class="mt-3 h-2 rounded-full bg-[#f5ddd0]">
+              <div class="h-2 w-full rounded-full bg-[#d36a42]"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 inline-flex items-center gap-2 rounded-full border border-[#e4bba8] bg-white/75 px-4 py-2 text-sm font-semibold text-[#8a442a] shadow-sm">
+          <span>📈</span>
+          <span>+123 stuks groei in 2025</span>
+        </div>
+      </div>
+    </article>
+  </section>
+</BaseLayout>

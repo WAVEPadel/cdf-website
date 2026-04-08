@@ -1,0 +1,531 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SponsorForm from "../components/SponsorForm.astro";
+import { newsItems } from "../data/newsItems";
+
+const featuredWagens = [
+  {
+    jaar: "2025",
+    naam: "Oase",
+    beschrijving: "Een verfrissende oase in de woestijn, tot leven gebracht met duizenden bloemen.",
+    prijs: "6e",
+    image: "/archief-oase.png",
+  },
+  {
+    jaar: "2024",
+    naam: "Bromtollen",
+    beschrijving: "Een kleurrijke ode aan het klassieke kinderspeelgoed, tot leven gebracht met duizenden bloemen.",
+    prijs: "10e",
+    image: "/archief-bromtollen.png",
+  },
+  {
+    jaar: "2023",
+    naam: "Expeditie Lapland",
+    beschrijving: "Een magische reis naar het hoge noorden, compleet met noorderlicht en rendieren.",
+    prijs: "9e",
+    image: "/archief-expeditie-lapland.png",
+  },
+  {
+    jaar: "2019",
+    naam: "Achter de Schermen",
+    beschrijving: "Een kijkje achter de coulissen van de filmwereld.",
+    prijs: "1B",
+    image: "/archief-achter-de-schermen.png",
+  },
+  {
+    jaar: "2018",
+    naam: "Mardi Gras",
+    beschrijving: "De uitbundige sfeer van New Orleans gevangen in bloemen.",
+    prijs: "1D",
+    image: "/archief-mardi-gras.png",
+  },
+  {
+    jaar: "2017",
+    naam: "Perzië",
+    beschrijving: "Oosterse pracht en praal uit het oude Perzische rijk.",
+    prijs: "1C",
+    image: "/archief-perzie.png",
+  },
+  {
+    jaar: "2016",
+    naam: "Het Draaiorgel",
+    beschrijving: "Een meesterwerk dat geschiedenis schreef. Het draaiorgel kwam tot leven met ongekende precisie en vakmanschap.",
+    prijs: "Eerste- en Ereprijs | Ontwerpersprijs | Arrangeursprijs | Figuratieprijs | Publieksprijs",
+    image: "/archief-draaiorgel.png",
+  },
+  {
+    jaar: "2015",
+    naam: "Jaarringen",
+    beschrijving: "De groei van de natuur vertaald in een indrukwekkende bloemencreatie.",
+    prijs: "1B | Ontwerpersprijs",
+    image: "/archief-jaarringen.png",
+  },
+  {
+    jaar: "2012",
+    naam: "De Trip",
+    beschrijving: "Een psychedelische reis door tijd en ruimte, bekroond met de hoogste eer.",
+    prijs: "Eerste- en Ereprijs | Figuratieprijs",
+    image: "/archief-de-trip.png",
+  },
+  {
+    jaar: "1997",
+    naam: "Flintstones",
+    beschrijving: "De prehistorische familie uit Bedrock kwam tot leven. De laatste wagen van de eerste periode, afgesloten met het grootste feest.",
+    prijs: "—",
+    image: "/archief-flintstones.png",
+  },
+  {
+    jaar: "1995",
+    naam: "Wagennaam volgt",
+    beschrijving: "(voorbeeld)",
+    prijs: "—",
+    image: "https://picsum.photos/1100/700?random=502",
+  },
+  {
+    jaar: "1994",
+    naam: "Wagennaam volgt",
+    beschrijving: "(voorbeeld)",
+    prijs: "—",
+    image: "https://picsum.photos/1100/700?random=501",
+  },
+  {
+    jaar: "1993",
+    naam: "Wagennaam volgt",
+    beschrijving: "Het jaar van de comeback. Na een periode van stilstand keerde Confrérie des Fleurs terug.",
+    prijs: "—",
+    image: "https://picsum.photos/1100/700?random=500",
+  },
+];
+
+const bouwProces = [
+  { titel: "Tekening uitzoeken", image: "/proces-tekening-uitzoeken.png", position: "center 45%" },
+  { titel: "Knollen scheuren", image: "/proces-knollen-scheuren-2.png" },
+  { titel: "Tent opbouwen", image: "/proces-tent-opbouwen.png" },
+  { titel: "Knollen poten", image: "/proces-knollen-poten.png" },
+  { titel: "Skelet lassen", image: "/proces-skelet-lassen-2.png" },
+  { titel: "Plasticen", image: "/proces-plasticen.png" },
+  { titel: "Freubelen", image: "/proces-freubelen.png", position: "center 20%" },
+  { titel: "Struunen", image: "https://picsum.photos/800/520?random=408" },
+  { titel: "Bloemen plukken", image: "/proces-bloemen-plukken.png" },
+  { titel: "Bloemen prikken", image: "/proces-bloemen-prikken.png", position: "center 18%" },
+  { titel: "Vrijdag nacht doorhalen", image: "/proces-vrijdag-nacht-doorhalen.png" },
+  { titel: "Figuratie", image: "/proces-figuratie.png" },
+  { titel: "Op naar het bloemencorso!", image: "/proces-corsowagen-compleet.png" },
+];
+
+const latestNews = newsItems.slice(0, 3);
+---
+
+<BaseLayout title="Confrérie des Fleurs | Corsowijk Eelde">
+  <section class="border-b border-stone-200 bg-[linear-gradient(90deg,#f8e7dc_0%,#f4e0d3_50%,#f8e7dc_100%)]">
+    <div class="mx-auto w-full max-w-6xl px-4 py-3">
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-stone-800">
+        <span class="font-semibold text-[#b45433]">Belangrijke data</span>
+        <span><strong>17 mei</strong> Start bouwseizoen</span>
+        <span><strong>7 juni</strong> Ontwerpkeuze definitief</span>
+        <span><strong>4 sept</strong> Start bloemenweek</span>
+        <span><strong>13 sept</strong> Bloemencorso Eelde</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative isolate overflow-hidden border-b border-stone-200">
+    <img
+      src="/hero-cdf.png"
+      alt="Bloemencorso sfeerbeeld"
+      class="h-[76vh] min-h-[540px] w-full object-cover [filter:saturate(1.05)_contrast(1.03)_brightness(1.03)]"
+    />
+    <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,244,236,0.93)_0%,rgba(248,244,236,0.88)_30%,rgba(248,244,236,0.54)_56%,rgba(248,244,236,0.18)_100%)]"></div>
+    <div class="absolute inset-x-0 bottom-0 mx-auto w-full max-w-6xl px-4 pb-14">
+      <p class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-[#b85a37]">
+        <span aria-hidden="true">❀</span>
+        <span>Corsowijk Eelde</span>
+      </p>
+      <h1 class="mt-4 max-w-[580px] text-5xl font-semibold leading-[0.98] text-stone-900 md:text-7xl">Confrérie des Fleurs</h1>
+      <p class="mt-4 max-w-[620px] text-3xl leading-tight text-stone-800">Vriendschap, creativiteit en corsokoorts in Eelde</p>
+      <p class="mt-4 max-w-[560px] text-stone-700">
+        Wij zijn een hechte vriendengroep met een gedeelde passie voor bouwen, bloemen, corso en gezelligheid. Samen creëren we elk jaar iets bijzonders voor Bloemencorso Eelde.
+      </p>
+      <p class="mt-5 text-4xl italic text-[#7a4b35]">Ook dat is Confrérie!</p>
+      <div class="mt-6 flex flex-wrap gap-2 text-xs">
+        <a href="/historie" class="rounded-full bg-[#d36a42] px-4 py-2 font-medium text-white">Historie CDF</a>
+        <a href="/nieuws" class="rounded-full border border-stone-300 bg-white/85 px-4 py-2 text-stone-800">Nieuws/updates</a>
+        <a href="https://www.instagram.com/corsowijk_cdf/" target="_blank" class="rounded-full border border-stone-300 bg-white/85 px-4 py-2 text-stone-800">Volg ons ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-12 border-y border-stone-200/60 bg-[#f7f2e8]">
+    <div class="mx-auto w-full max-w-6xl px-4 py-12">
+    <div class="grid items-start gap-10 md:grid-cols-2">
+      <div class="space-y-4">
+      <p class="text-sm uppercase tracking-[0.2em] text-emerald-700">Wie wij zijn</p>
+      <h2 class="text-5xl font-semibold leading-tight">Een vriendengroep met hart voor het corso</h2>
+      <p class="text-stone-600">
+        Confrérie des Fleurs is geen traditionele corsowijk met een vaste straat of buurt als basis. Wij zijn een hechte vriendengroep, samengesteld uit mensen van verschillende plekken, verenigd door onze liefde voor het bloemencorso.
+      </p>
+      <p class="text-stone-600">
+        Wat ons bindt is meer dan alleen het bouwen van wagens. Het is de gezelligheid, de creativiteit, het vakmanschap en de vriendschappen die elk jaar opnieuw tot bloei komen. Van de eerste schets tot de laatste bloem.
+      </p>
+      <p class="text-stone-600">
+        De naam Confrérie des Fleurs betekent letterlijk "Broederschap der bloemen" en dat vat precies samen waar het bij ons om draait: samen, met passie, iets moois maken.
+      </p>
+      </div>
+      <img src="/wie-wij-zijn-cdf.png" alt="Confrérie des Fleurs vriendengroep" class="h-full min-h-80 w-full rounded-2xl object-cover shadow-sm" />
+    </div>
+    </div>
+  </section>
+
+  <section class="bg-[#f4efe3]">
+    <div class="mx-auto w-full max-w-6xl px-4 pb-4 pt-12">
+    <div class="grid gap-5 md:grid-cols-3">
+      <article class="rounded-2xl border border-stone-200/80 bg-[#fbf7ef] p-6">
+        <p class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#f9e6de] text-sm">✨</p>
+        <h3 class="font-semibold">Historie CDF</h3>
+        <p class="mt-2 text-sm text-stone-600">Ontdek het verhaal achter Confrérie des Fleurs, van oprichting in 1973 tot nu.</p>
+        <a href="/historie" class="mt-3 inline-block text-sm font-medium text-[#d36a42]">Lees meer ↗</a>
+      </article>
+      <article class="rounded-2xl border border-stone-200/80 bg-[#fbf7ef] p-6">
+        <p class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#f4e2f2] text-sm">❀</p>
+        <h3 class="font-semibold">Nieuws/updates</h3>
+        <p class="mt-2 text-sm text-stone-600">Lees de laatste updates uit de schuur, van voorbereidingen tot corsoweek.</p>
+        <a href="/nieuws" class="mt-3 inline-block text-sm font-medium text-[#d36a42]">Bekijk updates ↗</a>
+      </article>
+      <article class="rounded-2xl border border-stone-200/80 bg-[#fbf7ef] p-6">
+        <p class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#f8eecf] text-sm">◉</p>
+        <h3 class="font-semibold">Volg ons op Instagram</h3>
+        <p class="mt-2 text-sm text-stone-600">Blijf op de hoogte van bouwmomenten, sfeerbeelden en de laatste updates.</p>
+        <a href="https://www.instagram.com/corsowijk_cdf/" target="_blank" class="mt-3 inline-block text-sm font-medium text-[#d36a42]">@corsowijk_cdf ↗</a>
+      </article>
+    </div>
+    </div>
+  </section>
+
+  <section class="border-y border-stone-200/60 bg-[#f4efe3]">
+    <div class="mx-auto w-full max-w-6xl px-4 pb-12 pt-6">
+    <p class="text-sm uppercase tracking-[0.2em] text-emerald-700">Ons archief</p>
+    <h2 class="mt-3 text-4xl font-semibold leading-tight md:text-5xl">Door de jaren heen</h2>
+    <p class="mt-3 max-w-2xl text-stone-700">Een selectie van onze wagens door de jaren heen. Van kleurrijke creaties tot bekroonde meesterwerken.</p>
+
+    <div id="archief-slider" class="mt-8 grid items-center gap-6 md:mt-10 md:gap-8 md:grid-cols-[minmax(420px,1fr)_minmax(460px,1fr)]">
+      <div class="flex flex-col gap-5 md:min-h-[430px]">
+        <p id="slide-year" class="text-5xl font-semibold text-[#d6aca1] md:text-6xl">{featuredWagens[0].jaar}</p>
+        <h3 id="slide-title" class="text-3xl font-semibold md:text-4xl">{featuredWagens[0].naam}</h3>
+        <p id="slide-description" class="max-w-xl text-stone-700">{featuredWagens[0].beschrijving}</p>
+        <div class="flex min-h-[56px] flex-wrap items-start gap-2 md:min-h-[96px]">
+          <span aria-hidden="true" class="mr-1 text-lg">🏆</span>
+          <div id="slide-prizes" class="flex flex-wrap gap-2">
+            {
+              featuredWagens[0].prijs
+                .split("|")
+                .map((item) => item.trim())
+                .filter(Boolean)
+                .map((prijs) => (
+                  <span class="rounded-full border border-[#ead7af] bg-[#efdeb8] px-3 py-1 text-sm font-medium text-stone-800">{prijs}</span>
+                ))
+            }
+          </div>
+        </div>
+
+        <div class="mt-auto space-y-6">
+          <div class="flex items-center gap-2 md:gap-3">
+            <button
+              type="button"
+              id="slide-prev"
+              class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-white transition hover:brightness-95 md:h-14 md:w-14"
+              aria-label="Vorige slide"
+            >
+              <span class="text-2xl leading-none md:text-3xl">‹</span>
+            </button>
+            <button
+              type="button"
+              id="slide-next"
+              class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-white transition hover:brightness-95 md:h-14 md:w-14"
+              aria-label="Volgende slide"
+            >
+              <span class="text-2xl leading-none md:text-3xl">›</span>
+            </button>
+          </div>
+
+          <a
+            href="/door-de-jaren-heen"
+            class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-5 py-2 text-sm font-medium text-stone-700 transition hover:border-stone-400"
+          >
+            Bekijk alle wagens
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="order-first space-y-4 md:order-none md:pl-2">
+        <img
+          id="slide-image"
+          src={featuredWagens[0].image}
+          alt={`Wagen ${featuredWagens[0].naam}`}
+          class="h-[250px] w-full rounded-2xl object-cover shadow-lg sm:h-[300px] md:h-[430px]"
+        />
+        <div id="slide-dots" class="flex justify-center pt-1 md:justify-end">
+          {
+            featuredWagens.map((_, idx) => (
+              <button
+                type="button"
+                class:list={[
+                  "mr-1.5 h-2.5 w-6 rounded-full transition md:mr-2 md:w-8",
+                  idx === 0 ? "bg-[#d36a42]" : "bg-stone-300",
+                ]}
+                data-dot-index={idx}
+                aria-label={`Ga naar slide ${idx + 1}`}
+              ></button>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <script>
+      const slides = [
+        {
+          jaar: "2025",
+          naam: "Oase",
+          beschrijving: "Een verfrissende oase in de woestijn, tot leven gebracht met duizenden bloemen.",
+          prijs: "6e",
+          image: "/archief-oase.png",
+        },
+        {
+          jaar: "2024",
+          naam: "Bromtollen",
+          beschrijving: "Een kleurrijke ode aan het klassieke kinderspeelgoed, tot leven gebracht met duizenden bloemen.",
+          prijs: "10e",
+          image: "/archief-bromtollen.png",
+        },
+        {
+          jaar: "2023",
+          naam: "Expeditie Lapland",
+          beschrijving: "Een magische reis naar het hoge noorden, compleet met noorderlicht en rendieren.",
+          prijs: "9e",
+          image: "/archief-expeditie-lapland.png",
+        },
+        {
+          jaar: "2019",
+          naam: "Achter de Schermen",
+          beschrijving: "Een kijkje achter de coulissen van de filmwereld.",
+          prijs: "1B",
+          image: "/archief-achter-de-schermen.png",
+        },
+        {
+          jaar: "2018",
+          naam: "Mardi Gras",
+          beschrijving: "De uitbundige sfeer van New Orleans gevangen in bloemen.",
+          prijs: "1D",
+          image: "/archief-mardi-gras.png",
+        },
+        {
+          jaar: "2017",
+          naam: "Perzië",
+          beschrijving: "Oosterse pracht en praal uit het oude Perzische rijk.",
+          prijs: "1C",
+          image: "/archief-perzie.png",
+        },
+        {
+          jaar: "2016",
+          naam: "Het Draaiorgel",
+          beschrijving: "Een meesterwerk dat geschiedenis schreef. Het draaiorgel kwam tot leven met ongekende precisie en vakmanschap.",
+          prijs: "Eerste- en Ereprijs | Ontwerpersprijs | Arrangeursprijs | Figuratieprijs | Publieksprijs",
+          image: "/archief-draaiorgel.png",
+        },
+        {
+          jaar: "2015",
+          naam: "Jaarringen",
+          beschrijving: "De groei van de natuur vertaald in een indrukwekkende bloemencreatie.",
+          prijs: "1B | Ontwerpersprijs",
+          image: "/archief-jaarringen.png",
+        },
+        {
+          jaar: "2012",
+          naam: "De Trip",
+          beschrijving: "Een psychedelische reis door tijd en ruimte, bekroond met de hoogste eer.",
+          prijs: "Eerste- en Ereprijs | Figuratieprijs",
+          image: "/archief-de-trip.png",
+        },
+        {
+          jaar: "1997",
+          naam: "Flintstones",
+          beschrijving: "De prehistorische familie uit Bedrock kwam tot leven. De laatste wagen van de eerste periode, afgesloten met het grootste feest.",
+          prijs: "—",
+          image: "/archief-flintstones.png",
+        },
+        {
+          jaar: "1995",
+          naam: "Wagennaam volgt",
+          beschrijving: "(voorbeeld)",
+          prijs: "—",
+          image: "https://picsum.photos/1100/700?random=502",
+        },
+        {
+          jaar: "1994",
+          naam: "Wagennaam volgt",
+          beschrijving: "(voorbeeld)",
+          prijs: "—",
+          image: "https://picsum.photos/1100/700?random=501",
+        },
+        {
+          jaar: "1993",
+          naam: "Wagennaam volgt",
+          beschrijving: "Het jaar van de comeback. Na een periode van stilstand keerde Confrérie des Fleurs terug.",
+          prijs: "—",
+          image: "https://picsum.photos/1100/700?random=500",
+        },
+      ];
+
+      let current = 0;
+      const yearEl = document.getElementById("slide-year");
+      const titleEl = document.getElementById("slide-title");
+      const descriptionEl = document.getElementById("slide-description");
+      const prizesEl = document.getElementById("slide-prizes");
+      const imageEl = document.getElementById("slide-image");
+      const prevEl = document.getElementById("slide-prev");
+      const nextEl = document.getElementById("slide-next");
+      const dots = Array.from(document.querySelectorAll("[data-dot-index]"));
+
+      const renderSlide = (index) => {
+        const slide = slides[index];
+        if (!yearEl || !titleEl || !descriptionEl || !prizesEl || !imageEl) return;
+
+        yearEl.textContent = slide.jaar;
+        titleEl.textContent = slide.naam;
+        descriptionEl.textContent = slide.beschrijving;
+        const prijsItems = slide.prijs
+          .split("|")
+          .map((item) => item.trim())
+          .filter(Boolean);
+        prizesEl.innerHTML = prijsItems
+          .map(
+            (prijs) =>
+              `<span class="rounded-full border border-[#ead7af] bg-[#efdeb8] px-3 py-1 text-sm font-medium text-stone-800">${prijs}</span>`,
+          )
+          .join("");
+        imageEl.setAttribute("src", slide.image);
+        imageEl.setAttribute("alt", `Wagen ${slide.naam}`);
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("bg-[#d36a42]", idx === index);
+          dot.classList.toggle("bg-stone-300", idx !== index);
+        });
+      };
+
+      prevEl?.addEventListener("click", () => {
+        current = (current - 1 + slides.length) % slides.length;
+        renderSlide(current);
+      });
+
+      nextEl?.addEventListener("click", () => {
+        current = (current + 1) % slides.length;
+        renderSlide(current);
+      });
+
+      dots.forEach((dot, idx) => {
+        dot.addEventListener("click", () => {
+          current = idx;
+          renderSlide(current);
+        });
+      });
+    </script>
+    </div>
+  </section>
+
+  <section class="bg-[#f4ede1]">
+    <div class="mx-auto w-full max-w-6xl px-4 py-12">
+    <h2 class="text-4xl font-semibold leading-tight">Een kijkje achter de schermen van idee tot Corsowagen.</h2>
+    <p class="mt-3 max-w-3xl text-stone-600">
+      Van eerste schets tot de laatste bloem: dit is ons bouwproces in stappen.
+    </p>
+
+    <div class="mt-8 rounded-3xl border border-stone-200/70 bg-[#f8f3ea] p-4 md:p-6">
+      <div
+        id="proces-track"
+        class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {
+          bouwProces.map((stap, index) => (
+            <article class="group shrink-0 basis-[82%] snap-start rounded-2xl border border-stone-200 bg-[#fffdf8] p-3 transition hover:-translate-y-0.5 md:basis-[47%] lg:basis-[39%]">
+              <img
+                src={stap.image}
+                alt={stap.titel}
+                class="h-44 w-full rounded-xl object-cover md:h-52"
+                style={stap.position ? `object-position: ${stap.position};` : undefined}
+              />
+              <p class="mt-3 flex items-center gap-2 text-base font-semibold text-stone-800">
+                <span class="inline-flex min-w-8 justify-center rounded-full bg-[#f3dfba] px-2 py-0.5 text-[#b95b37]">{index + 1}.</span>
+                <span aria-hidden="true" class="text-[#d36a42]">↗</span>
+                <span>{stap.titel}</span>
+              </p>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">
+                Hier komt nog een uitleg over de stap (bij {stap.titel.toLowerCase()}, {stap.titel.toLowerCase()} etc etc)
+              </p>
+            </article>
+          ))
+        }
+      </div>
+
+      <div class="mt-5 flex justify-center gap-3">
+        <button
+          type="button"
+          id="proces-prev"
+          class="inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-2xl text-white transition hover:brightness-95"
+          aria-label="Vorige processtappen"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          id="proces-next"
+          class="inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-2xl text-white transition hover:brightness-95"
+          aria-label="Volgende processtappen"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const procesTrack = document.getElementById("proces-track");
+      const procesPrev = document.getElementById("proces-prev");
+      const procesNext = document.getElementById("proces-next");
+
+      const scrollProces = (direction) => {
+        if (!procesTrack) return;
+        const amount = Math.max(280, procesTrack.clientWidth * 0.4);
+        procesTrack.scrollBy({ left: direction * amount, behavior: "smooth" });
+      };
+
+      procesPrev?.addEventListener("click", () => scrollProces(-1));
+      procesNext?.addEventListener("click", () => scrollProces(1));
+    </script>
+    </div>
+  </section>
+
+  <section class="bg-[#f5efe2]">
+    <div class="mx-auto w-full max-w-6xl px-4 pb-6 pt-4">
+      <div class="flex items-center justify-between gap-4">
+        <h2 class="text-2xl font-semibold">Nieuws/updates</h2>
+        <a href="/nieuws" class="text-sm font-medium text-[#d36a42]">Bekijk alles ↗</a>
+      </div>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {
+          latestNews.map((item) => (
+            <article class="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
+              <p class="text-xs uppercase tracking-[0.16em] text-[#b45433]">{item.label} - {item.date}</p>
+              <h3 class="mt-2 text-lg font-semibold">{item.title}</h3>
+              <p class="mt-2 text-sm text-stone-600">{item.excerpt}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#f5efe2]">
+    <div class="mx-auto w-full max-w-6xl px-4 pb-20 pt-12">
+    <SponsorForm />
+    </div>
+  </section>
+</BaseLayout>
