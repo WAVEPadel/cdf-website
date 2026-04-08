@@ -28,13 +28,16 @@ const pathname = Astro.url.pathname;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="/favicon.png?v=20260408b" />
     <link rel="shortcut icon" type="image/png" href="/favicon.png?v=20260408b" />
     <link rel="apple-touch-icon" href="/favicon.png?v=20260408b" />
     <title>{title}</title>
   </head>
-  <body class="bg-[#f5efe2] text-stone-900">
-    <header class="sticky top-0 z-50 border-b border-stone-200 bg-white/95 backdrop-blur">
+  <body class="text-stone-900">
+    <header class="sticky top-0 z-50 border-b border-[#e3d3c4] bg-[#fffaf2]/95 backdrop-blur">
       <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4">
         <a href="/" class="inline-flex items-center gap-2 text-lg font-semibold tracking-wide text-stone-900">
           <span class="text-xs text-[#c95c36]">❀</span>
@@ -52,7 +55,7 @@ const pathname = Astro.url.pathname;
                     class:list={[
                       "inline-flex items-center gap-1 rounded-full px-3 py-1.5 transition hover:text-stone-900",
                       (pathname === "/historie" || pathname === "/door-de-jaren-heen")
-                        ? "bg-[#d36a42] text-white"
+                        ? "cdf-glow-ring bg-[#cd6941] text-white"
                         : "text-stone-700",
                     ]}
                   >
@@ -81,7 +84,7 @@ const pathname = Astro.url.pathname;
                   href={item.href}
                   class:list={[
                     "rounded-full px-3 py-1.5 transition hover:text-stone-900",
-                    pathname === item.href ? "bg-[#d36a42] text-white" : "text-stone-700",
+                    pathname === item.href ? "cdf-glow-ring bg-[#cd6941] text-white" : "text-stone-700",
                   ]}
                 >
                   {item.label}
@@ -162,7 +165,7 @@ const pathname = Astro.url.pathname;
     <main>
       <slot />
     </main>
-    <footer class="mt-14 border-t border-[#e3c6b8] bg-[linear-gradient(180deg,#f3dfd4_0%,#efd9cc_35%,#e8d1c1_100%)]">
+    <footer class="mt-14 border-t border-[#e3c6b8] bg-[linear-gradient(180deg,#f4e2d8_0%,#efdacd_35%,#e7cfbf_100%)]">
       <div class="mx-auto w-full max-w-6xl px-4 py-8">
         <div class="grid gap-8 md:grid-cols-[1.35fr_0.9fr_1fr] md:gap-10">
           <div>

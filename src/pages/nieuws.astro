@@ -21,29 +21,29 @@ const recentItems = newsItems.slice(1);
   </section>
 
   <section class="mx-auto w-full max-w-6xl px-4 py-16">
-    <p class="text-sm uppercase tracking-[0.2em] text-emerald-700">Confrérie des Fleurs</p>
+    <p class="cdf-eyebrow">Confrérie des Fleurs</p>
     <h1 class="mt-3 text-4xl font-bold md:text-5xl">Nieuws/updates</h1>
     <p class="mt-4 max-w-3xl text-stone-600">
       Hier delen we het laatste nieuws uit de schuur, updates uit het bouwseizoen en belangrijke momenten richting het corso.
     </p>
 
     <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      <article class="rounded-2xl border border-stone-200 bg-[#f8f3ea] p-4">
+      <article class="cdf-surface-card rounded-2xl p-4">
         <p class="text-xs uppercase tracking-[0.16em] text-[#b45433]">Volgende mijlpaal</p>
         <p class="mt-2 text-2xl font-semibold">Corsoweek</p>
         <p class="mt-1 text-sm text-stone-600">Half september</p>
       </article>
-      <article class="rounded-2xl border border-stone-200 bg-[#f8f3ea] p-4">
+      <article class="cdf-surface-card rounded-2xl p-4">
         <p class="text-xs uppercase tracking-[0.16em] text-[#b45433]">Processtappen</p>
         <p class="mt-2 text-2xl font-semibold">14 fases</p>
         <p class="mt-1 text-sm text-stone-600">Van ontwerp tot corso</p>
       </article>
-      <article class="rounded-2xl border border-stone-200 bg-[#f8f3ea] p-4">
+      <article class="cdf-surface-card rounded-2xl p-4">
         <p class="text-xs uppercase tracking-[0.16em] text-[#b45433]">Laatste update</p>
         <p class="mt-2 text-2xl font-semibold">Vandaag</p>
         <p class="mt-1 text-sm text-stone-600">Nieuwe schuurbeelden</p>
       </article>
-      <article class="rounded-2xl border border-stone-200 bg-[#f8f3ea] p-4">
+      <article class="cdf-surface-card rounded-2xl p-4">
         <p class="text-xs uppercase tracking-[0.16em] text-[#b45433]">Volg ons live</p>
         <p class="mt-2 text-2xl font-semibold">@corsowijk_cdf</p>
         <p class="mt-1 text-sm text-stone-600">Instagram updates</p>
@@ -52,27 +52,27 @@ const recentItems = newsItems.slice(1);
   </section>
 
   <section class="mx-auto w-full max-w-6xl px-4 pb-10">
-    <article class="rounded-2xl border border-stone-200 bg-[#f8f3ea] p-6">
+    <article class="cdf-surface-card rounded-2xl p-6">
       <h2 class="text-2xl font-semibold">Belangrijke data</h2>
       <p class="mt-3 text-stone-600">Een overzicht van de belangrijkste momenten in aanloop naar het corso.</p>
       <div class="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-        <article class="rounded-xl border border-stone-200 bg-[#fffdf8] p-3">
+        <article class="cdf-surface-card rounded-xl p-3">
           <p class="text-sm font-semibold text-[#b45433]">11 april 2026</p>
           <p class="mt-1 text-sm text-stone-600">Start bouw tent en eerste opbouwdag op locatie.</p>
         </article>
-        <article class="rounded-xl border border-stone-200 bg-[#fffdf8] p-3">
+        <article class="cdf-surface-card rounded-xl p-3">
           <p class="text-sm font-semibold text-[#b45433]">9 mei 2026</p>
           <p class="mt-1 text-sm text-stone-600">Open inloopavond voor iedereen die wil meekijken of meehelpen.</p>
         </article>
-        <article class="rounded-xl border border-stone-200 bg-[#fffdf8] p-3">
+        <article class="cdf-surface-card rounded-xl p-3">
           <p class="text-sm font-semibold text-[#b45433]">6 juni 2026</p>
           <p class="mt-1 text-sm text-stone-600">Feestavond met de ploeg en supporters van Confrérie des Fleurs.</p>
         </article>
-        <article class="rounded-xl border border-stone-200 bg-[#fffdf8] p-3">
+        <article class="cdf-surface-card rounded-xl p-3">
           <p class="text-sm font-semibold text-[#b45433]">22 augustus 2026</p>
           <p class="mt-1 text-sm text-stone-600">Gezamenlijke BBQ als opwarmer richting de corsoweek.</p>
         </article>
-        <article class="rounded-xl border border-stone-200 bg-[#fffdf8] p-3">
+        <article class="cdf-surface-card rounded-xl p-3">
           <p class="text-sm font-semibold text-[#b45433]">5 &amp; 6 september 2026</p>
           <p class="mt-1 text-sm text-stone-600">Bloemencorso: twee dagen vol sfeer, figuratie en wagens op topniveau.</p>
         </article>
@@ -81,7 +81,7 @@ const recentItems = newsItems.slice(1);
   </section>
 
   <section class="mx-auto w-full max-w-6xl px-4 pb-10">
-    <article class="grid gap-6 rounded-3xl border border-stone-200 bg-[#f8f3ea] p-6 md:grid-cols-[1.1fr,1fr] md:p-8">
+    <article class="cdf-surface-card grid gap-6 rounded-3xl p-6 md:grid-cols-[1.1fr,1fr] md:p-8">
       <img src="https://picsum.photos/1000/650?random=700" alt="Bouwupdate uit de schuur" class="h-72 w-full rounded-2xl object-cover" />
       <div>
         <p class="text-xs uppercase tracking-[0.16em] text-[#b45433]">Uitgelichte update - {featuredItem.date}</p>
@@ -101,7 +101,7 @@ const recentItems = newsItems.slice(1);
     <div class="mt-5 grid gap-5 md:grid-cols-2">
       {
         recentItems.map((item) => (
-          <article class="rounded-2xl border border-stone-200 bg-[#f8f3ea] p-5">
+          <article class="cdf-surface-card rounded-2xl p-5">
             <p class="text-xs uppercase tracking-[0.16em] text-[#b45433]">{item.label} - {item.date}</p>
             <h3 class="mt-2 text-xl font-semibold">{item.title}</h3>
             <p class="mt-2 text-sm text-stone-600">{item.excerpt}</p>

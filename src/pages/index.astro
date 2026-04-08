@@ -142,12 +142,12 @@ const latestNews = newsItems.slice(0, 3);
         <span aria-hidden="true">❀</span>
         <span>Corsowijk Eelde</span>
       </p>
-      <h1 class="mt-4 max-w-[580px] text-5xl font-semibold leading-[0.98] text-stone-900 md:text-7xl">Confrérie des Fleurs</h1>
-      <p class="mt-4 max-w-[620px] text-3xl leading-tight text-stone-800">Vriendschap, creativiteit en corsokoorts in Eelde</p>
+      <h1 class="mt-4 max-w-[580px] text-4xl font-semibold leading-[0.98] text-stone-900 sm:text-5xl md:text-7xl">Confrérie des Fleurs</h1>
+      <p class="mt-4 max-w-[620px] text-2xl leading-tight text-stone-800 sm:text-3xl">Vriendschap, creativiteit en corsokoorts in Eelde</p>
       <p class="mt-4 max-w-[560px] text-stone-700">
         Wij zijn een hechte vriendengroep met een gedeelde passie voor bouwen, bloemen, corso en gezelligheid. Samen creëren we elk jaar iets bijzonders voor Bloemencorso Eelde.
       </p>
-      <p class="mt-5 text-4xl italic text-[#7a4b35]">Ook dat is Confrérie!</p>
+      <p class="mt-5 text-3xl italic text-[#7a4b35] sm:text-4xl">Ook dat is Confrérie!</p>
       <div class="mt-6 flex flex-wrap gap-2 text-xs">
         <a href="/historie" class="rounded-full bg-[#d36a42] px-4 py-2 font-medium text-white">Historie CDF</a>
         <a href="/nieuws" class="rounded-full border border-stone-300 bg-white/85 px-4 py-2 text-stone-800">Nieuws/updates</a>
@@ -160,7 +160,7 @@ const latestNews = newsItems.slice(0, 3);
     <div class="mx-auto w-full max-w-6xl px-4 py-12">
     <div class="grid items-start gap-10 md:grid-cols-2">
       <div class="space-y-4">
-      <p class="text-sm uppercase tracking-[0.2em] text-emerald-700">Wie wij zijn</p>
+      <p class="cdf-eyebrow">Wie wij zijn</p>
       <h2 class="text-5xl font-semibold leading-tight">Een vriendengroep met hart voor het corso</h2>
       <p class="text-stone-600">
         Confrérie des Fleurs is geen traditionele corsowijk met een vaste straat of buurt als basis. Wij zijn een hechte vriendengroep, samengesteld uit mensen van verschillende plekken, verenigd door onze liefde voor het bloemencorso.
@@ -180,19 +180,19 @@ const latestNews = newsItems.slice(0, 3);
   <section class="bg-[#f4efe3]">
     <div class="mx-auto w-full max-w-6xl px-4 pb-4 pt-12">
     <div class="grid gap-5 md:grid-cols-3">
-      <article class="rounded-2xl border border-stone-200/80 bg-[#fbf7ef] p-6">
+      <article class="cdf-surface-card rounded-2xl p-6">
         <p class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#f9e6de] text-sm">✨</p>
         <h3 class="font-semibold">Historie CDF</h3>
         <p class="mt-2 text-sm text-stone-600">Ontdek het verhaal achter Confrérie des Fleurs, van oprichting in 1973 tot nu.</p>
         <a href="/historie" class="mt-3 inline-block text-sm font-medium text-[#d36a42]">Lees meer ↗</a>
       </article>
-      <article class="rounded-2xl border border-stone-200/80 bg-[#fbf7ef] p-6">
+      <article class="cdf-surface-card rounded-2xl p-6">
         <p class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#f4e2f2] text-sm">❀</p>
         <h3 class="font-semibold">Nieuws/updates</h3>
         <p class="mt-2 text-sm text-stone-600">Lees de laatste updates uit de schuur, van voorbereidingen tot corsoweek.</p>
         <a href="/nieuws" class="mt-3 inline-block text-sm font-medium text-[#d36a42]">Bekijk updates ↗</a>
       </article>
-      <article class="rounded-2xl border border-stone-200/80 bg-[#fbf7ef] p-6">
+      <article class="cdf-surface-card rounded-2xl p-6">
         <p class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#f8eecf] text-sm">◉</p>
         <h3 class="font-semibold">Volg ons op Instagram</h3>
         <p class="mt-2 text-sm text-stone-600">Blijf op de hoogte van bouwmomenten, sfeerbeelden en de laatste updates.</p>
@@ -204,7 +204,7 @@ const latestNews = newsItems.slice(0, 3);
 
   <section class="border-y border-stone-200/60 bg-[#f4efe3]">
     <div class="mx-auto w-full max-w-6xl px-4 pb-12 pt-6">
-    <p class="text-sm uppercase tracking-[0.2em] text-emerald-700">Ons archief</p>
+    <p class="cdf-eyebrow">Ons archief</p>
     <h2 class="mt-3 text-4xl font-semibold leading-tight md:text-5xl">Door de jaren heen</h2>
     <p class="mt-3 max-w-2xl text-stone-700">Een selectie van onze wagens door de jaren heen. Van kleurrijke creaties tot bekroonde meesterwerken.</p>
 
@@ -233,7 +233,7 @@ const latestNews = newsItems.slice(0, 3);
             <button
               type="button"
               id="slide-prev"
-              class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-white transition hover:brightness-95 md:h-14 md:w-14"
+            class="cdf-glow-ring inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-white transition hover:brightness-95 md:h-14 md:w-14"
               aria-label="Vorige slide"
             >
               <span class="text-2xl leading-none md:text-3xl">‹</span>
@@ -241,7 +241,7 @@ const latestNews = newsItems.slice(0, 3);
             <button
               type="button"
               id="slide-next"
-              class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-white transition hover:brightness-95 md:h-14 md:w-14"
+            class="cdf-glow-ring inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-white transition hover:brightness-95 md:h-14 md:w-14"
               aria-label="Volgende slide"
             >
               <span class="text-2xl leading-none md:text-3xl">›</span>
@@ -447,7 +447,7 @@ const latestNews = newsItems.slice(0, 3);
       >
         {
           bouwProces.map((stap, index) => (
-            <article class="group shrink-0 basis-[82%] snap-start rounded-2xl border border-stone-200 bg-[#fffdf8] p-3 transition hover:-translate-y-0.5 md:basis-[47%] lg:basis-[39%]">
+            <article class="cdf-surface-card group shrink-0 basis-[82%] snap-start rounded-2xl p-3 transition hover:-translate-y-0.5 md:basis-[47%] lg:basis-[39%]">
               <img
                 src={stap.image}
                 alt={stap.titel}
@@ -471,7 +471,7 @@ const latestNews = newsItems.slice(0, 3);
         <button
           type="button"
           id="proces-prev"
-          class="inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-2xl text-white transition hover:brightness-95"
+          class="cdf-glow-ring inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-2xl text-white transition hover:brightness-95"
           aria-label="Vorige processtappen"
         >
           ‹
@@ -479,7 +479,7 @@ const latestNews = newsItems.slice(0, 3);
         <button
           type="button"
           id="proces-next"
-          class="inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-2xl text-white transition hover:brightness-95"
+          class="cdf-glow-ring inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#d36a42] bg-[#d36a42] text-2xl text-white transition hover:brightness-95"
           aria-label="Volgende processtappen"
         >
           ›
@@ -513,7 +513,7 @@ const latestNews = newsItems.slice(0, 3);
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {
           latestNews.map((item) => (
-            <article class="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
+            <article class="cdf-surface-card rounded-2xl p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-[#b45433]">{item.label} - {item.date}</p>
               <h3 class="mt-2 text-lg font-semibold">{item.title}</h3>
               <p class="mt-2 text-sm text-stone-600">{item.excerpt}</p>
