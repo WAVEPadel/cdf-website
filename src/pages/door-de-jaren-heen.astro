@@ -21,13 +21,13 @@ const wagens = [
 <BaseLayout title="Door de jaren heen | Confrérie des Fleurs">
   <section class="mx-auto w-full max-w-6xl px-4 py-16">
     <p class="cdf-eyebrow">Confrérie des Fleurs</p>
-    <h1 class="mt-3 text-4xl font-bold md:text-5xl">Door de jaren heen</h1>
+    <h1 class="mt-3 text-3xl font-bold md:text-4xl">Door de jaren heen</h1>
     <p class="mt-4 max-w-3xl text-stone-600">Een overzicht van alle wagens van Confrérie des Fleurs door de jaren heen.</p>
   </section>
 
   <section class="mx-auto w-full max-w-6xl px-4 pb-20">
     <p class="cdf-eyebrow">Archief</p>
-    <h2 class="mt-3 text-3xl font-semibold">Alle wagens</h2>
+    <h2 class="mt-3 text-2xl font-semibold">Alle wagens</h2>
     <p class="mt-3 text-stone-600">13 wagens in het archief</p>
     <div class="mt-8 grid gap-4">
       {
@@ -40,7 +40,7 @@ const wagens = [
             />
             <div>
               <p class="text-sm text-emerald-700">{wagen.jaar}</p>
-              <h3 class="mt-1 text-2xl font-semibold">{wagen.naam}</h3>
+              <h3 class="mt-1 text-xl font-semibold">{wagen.naam}</h3>
               <p class="mt-2 text-stone-600">{wagen.beschrijving}</p>
               {
                 wagen.prijs && (

@@ -105,7 +105,7 @@ const bouwProces = [
   { titel: "Skelet lassen", image: "/proces-skelet-lassen-2.png" },
   { titel: "Plasticen", image: "/proces-plasticen.png" },
   { titel: "Freubelen", image: "/proces-freubelen.png", position: "center 20%" },
-  { titel: "Struunen", image: "https://picsum.photos/800/520?random=408" },
+  { titel: "Struunen", image: "/proces-struunen.png" },
   { titel: "Bloemen plukken", image: "/proces-bloemen-plukken.png" },
   { titel: "Bloemen prikken", image: "/proces-bloemen-prikken.png", position: "center 18%" },
   { titel: "Vrijdag nacht doorhalen", image: "/proces-vrijdag-nacht-doorhalen.png" },
@@ -142,7 +142,7 @@ const latestNews = newsItems.slice(0, 3);
         <span aria-hidden="true">❀</span>
         <span>Corsowijk Eelde</span>
       </p>
-      <h1 class="mt-4 max-w-[580px] text-4xl font-semibold leading-[0.98] text-stone-900 sm:text-5xl md:text-7xl">Confrérie des Fleurs</h1>
+      <h1 class="mt-4 max-w-[580px] text-3xl font-semibold leading-[0.98] text-stone-900 sm:text-4xl md:text-6xl">Confrérie des Fleurs</h1>
       <p class="mt-4 max-w-[620px] text-2xl leading-tight text-stone-800 sm:text-3xl">Vriendschap, creativiteit en corsokoorts in Eelde</p>
       <p class="mt-4 max-w-[560px] text-stone-700">
         Wij zijn een hechte vriendengroep met een gedeelde passie voor bouwen, bloemen, corso en gezelligheid. Samen creëren we elk jaar iets bijzonders voor Bloemencorso Eelde.
@@ -161,7 +161,7 @@ const latestNews = newsItems.slice(0, 3);
     <div class="grid items-start gap-10 md:grid-cols-2">
       <div class="space-y-4">
       <p class="cdf-eyebrow">Wie wij zijn</p>
-      <h2 class="text-5xl font-semibold leading-tight">Een vriendengroep met hart voor het corso</h2>
+      <h2 class="text-4xl font-semibold leading-tight md:text-5xl">Een vriendengroep met hart voor het corso</h2>
       <p class="text-stone-600">
         Confrérie des Fleurs is geen traditionele corsowijk met een vaste straat of buurt als basis. Wij zijn een hechte vriendengroep, samengesteld uit mensen van verschillende plekken, verenigd door onze liefde voor het bloemencorso.
       </p>
@@ -205,13 +205,13 @@ const latestNews = newsItems.slice(0, 3);
   <section class="border-y border-stone-200/60 bg-[#f4efe3]">
     <div class="mx-auto w-full max-w-6xl px-4 pb-12 pt-6">
     <p class="cdf-eyebrow">Ons archief</p>
-    <h2 class="mt-3 text-4xl font-semibold leading-tight md:text-5xl">Door de jaren heen</h2>
+    <h2 class="mt-3 text-3xl font-semibold leading-tight md:text-4xl">Door de jaren heen</h2>
     <p class="mt-3 max-w-2xl text-stone-700">Een selectie van onze wagens door de jaren heen. Van kleurrijke creaties tot bekroonde meesterwerken.</p>
 
     <div id="archief-slider" class="mt-8 grid items-center gap-6 md:mt-10 md:gap-8 md:grid-cols-[minmax(420px,1fr)_minmax(460px,1fr)]">
       <div class="flex flex-col gap-5 md:min-h-[430px]">
         <p id="slide-year" class="text-5xl font-semibold text-[#d6aca1] md:text-6xl">{featuredWagens[0].jaar}</p>
-        <h3 id="slide-title" class="text-3xl font-semibold md:text-4xl">{featuredWagens[0].naam}</h3>
+        <h3 id="slide-title" class="text-2xl font-semibold md:text-3xl">{featuredWagens[0].naam}</h3>
         <p id="slide-description" class="max-w-xl text-stone-700">{featuredWagens[0].beschrijving}</p>
         <div class="flex min-h-[56px] flex-wrap items-start gap-2 md:min-h-[96px]">
           <span aria-hidden="true" class="mr-1 text-lg">🏆</span>
@@ -435,7 +435,7 @@ const latestNews = newsItems.slice(0, 3);
 
   <section class="bg-[#f4ede1]">
     <div class="mx-auto w-full max-w-6xl px-4 py-12">
-    <h2 class="text-4xl font-semibold leading-tight">Een kijkje achter de schermen van idee tot Corsowagen.</h2>
+    <h2 class="text-3xl font-semibold leading-tight md:text-4xl">Een kijkje achter de schermen van idee tot Corsowagen.</h2>
     <p class="mt-3 max-w-3xl text-stone-600">
       Van eerste schets tot de laatste bloem: dit is ons bouwproces in stappen.
     </p>
