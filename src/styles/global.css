@@ -39,10 +39,11 @@ a {
 h1,
 h2,
 h3 {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
   letter-spacing: -0.02em;
   line-height: 1.04;
   text-wrap: balance;
+  font-weight: 700;
 }
 
 p {
