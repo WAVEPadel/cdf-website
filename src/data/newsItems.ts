@@ -9,20 +9,20 @@ export const newsItems: NewsItem[] = [
   {
     date: "2026",
     label: "Update",
-    title: "In 2026 bouwen wij",
-    excerpt: "Het bal van ontwerpers Chris en Emily.",
+    title: "Het ontwerp voor 2026",
+    excerpt: "Het bal van Chris en Emily krijgt vorm.",
   },
   {
     date: "10 april",
-    label: "Nieuws",
-    title: "Tent opbouwen",
-    excerpt: "Vrijdag 10 april beginnen wij met de opbouw van de tent.",
+    label: "Update",
+    title: "Start opbouw van de tent",
+    excerpt: "Op vrijdag 10 april starten we met de opbouw van de tent.",
   },
   {
     date: "9 mei",
     label: "Update",
-    title: "Inloop avond",
-    excerpt: "Ontwerp presentatie, iedereen is welkom!",
+    title: "Inloopavond op 9 mei",
+    excerpt: "Tijdens deze avond presenteren we het ontwerp. Iedereen is van harte welkom.",
   },
   {
     date: "9 augustus 2026",
