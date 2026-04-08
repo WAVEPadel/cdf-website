@@ -7,22 +7,22 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
-    date: "17 mei 2026",
+    date: "2026",
     label: "Update",
-    title: "Bouwseizoen gestart",
-    excerpt: "De eerste schetsen zijn rond en de voorbereidingen in de schuur zijn begonnen.",
+    title: "In 2026 bouwen wij",
+    excerpt: "Het bal van ontwerpers Chris en Emily.",
   },
   {
-    date: "7 juni 2026",
+    date: "10 april",
     label: "Nieuws",
-    title: "Definitieve ontwerpkeuze",
-    excerpt: "Het thema is gekozen en de planning voor alle bouwfases is vastgesteld.",
+    title: "Tent opbouwen",
+    excerpt: "Vrijdag 10 april beginnen wij met de opbouw van de tent.",
   },
   {
-    date: "28 juni 2026",
-    label: "Achter de schermen",
-    title: "Constructie krijgt vorm",
-    excerpt: "Het skelet en de eerste figuratieonderdelen staan in de steigers.",
+    date: "9 mei",
+    label: "Update",
+    title: "Inloop avond",
+    excerpt: "Ontwerp presentatie, iedereen is welkom!",
   },
   {
     date: "9 augustus 2026",
